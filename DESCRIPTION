@@ -1,7 +1,7 @@
 Package: NeuCA
 Type: Package
 Title: NEUral network-based single-Cell Annotation tool
-Version: 0.1.0
+Version: 0.99.0
 Date: 2021-04-15
 Authors@R: c(person("Ziyi", "Li", role = "aut",
                      email = "ZLi16@mdanderson.org"),
