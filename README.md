@@ -90,3 +90,48 @@ table(predicted.label, Seg_true_cell_label)
 ```
 You may also draw a Sankey diagram to visualize the prediction accuracy:
 ![workflow](vignettes/sankey1.png)
+
+
+# Session info
+
+```
+## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Big Sur 10.16
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+## [8] methods   base     
+## 
+## other attached packages:
+##  [1] networkD3_0.4               NeuCA_0.1.0                
+##  [3] SingleCellExperiment_1.12.0 SummarizedExperiment_1.20.0
+##  [5] Biobase_2.50.0              GenomicRanges_1.42.0       
+##  [7] GenomeInfoDb_1.26.2         IRanges_2.24.1             
+##  [9] S4Vectors_0.28.1            BiocGenerics_0.36.0        
+## [11] MatrixGenerics_1.2.1        matrixStats_0.58.0         
+## [13] e1071_1.7-6                 limma_3.46.0               
+## [15] keras_2.4.0                 BiocStyle_2.18.1           
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.6             XVector_0.30.0         compiler_4.0.3        
+##  [4] BiocManager_1.30.10    zlibbioc_1.36.0        bitops_1.0-6          
+##  [7] base64enc_0.1-3        class_7.3-17           tools_4.0.3           
+## [10] zeallot_0.1.0          digest_0.6.27          jsonlite_1.7.2        
+## [13] evaluate_0.14          lattice_0.20-41        pkgconfig_2.0.3       
+## [16] rlang_0.4.10           igraph_1.2.6           Matrix_1.2-18         
+## [19] DelayedArray_0.16.1    yaml_2.2.1             xfun_0.21             
+## [22] GenomeInfoDbData_1.2.4 stringr_1.4.0          knitr_1.31            
+## [25] htmlwidgets_1.5.3      generics_0.1.0         grid_4.0.3            
+## [28] reticulate_1.18        R6_2.5.0               rmarkdown_2.7         
+## [31] bookdown_0.21          magrittr_2.0.1         whisker_0.4           
+## [34] tfruns_1.5.0           htmltools_0.5.1.1      tensorflow_2.4.0      
+## [37] stringi_1.5.3          proxy_0.4-25           RCurl_1.98-1.2
+```
