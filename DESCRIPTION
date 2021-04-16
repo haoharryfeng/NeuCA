@@ -1,0 +1,18 @@
+Package: NeuCA
+Type: Package
+Title: NEUral network-based single-Cell Annotation tool
+Version: 0.1.0
+Date: 2021-04-15
+Authors@R: c(person("Ziyi", "Li", role = "aut",
+                     email = "ZLi16@mdanderson.org"),
+              person("Hao", "Feng", role = c("aut", "cre"),
+                     email = "hxf155@case.edu"))
+Description: NeuCA is is a neural-network based method for scRNA-seq data annotation. It can automatically adjust its classification strategy depending on cell type correlations, to accurately annotate cell. NeuCA can automatically utilize the structure information of the cell types through a hierarchical tree to improve the annotation accuracy. It is especially helpful when the data contain closely correlated cell types.
+License: GPL-2
+Depends: keras, limma, e1071, SingleCellExperiment
+Suggests: BiocStyle, knitr, rmarkdown
+Collate: functions_NN.R functions_mhNN.R utils.R
+biocViews: SingleCell, Software, Classification, NeuralNetwork, RNASeq, Transcriptomics, DataRepresentation, Transcription, Sequencing, Preprocessing, GeneExpression, DataImport
+Encoding: UTF-8
+LazyData: false
+VignetteBuilder: knitr
