@@ -1,6 +1,6 @@
-# NeuCA
-## Neural-network based Cell Annotation tool
+# NeuCA: Neural-network based Cell Annotation tool
 
+-------------------
 We developed NEUral-network based Cell Annotation, `NeuCA`, a tool for cell type annotation using single-cell RNA-seq data. It is a supervised cell label assignment method that uses existing scRNA-seq data with known labels to train a neural network-based classifier, and then predict cell labels in single-cell RNA-seq data of interest.
 
 # 1. Introduction
