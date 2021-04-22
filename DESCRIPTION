@@ -10,7 +10,7 @@ Authors@R: c(person("Ziyi", "Li", role = "aut",
 Description: NeuCA is is a neural-network based method for scRNA-seq data annotation. It can automatically adjust its classification strategy depending on cell type correlations, to accurately annotate cell. NeuCA can automatically utilize the structure information of the cell types through a hierarchical tree to improve the annotation accuracy. It is especially helpful when the data contain closely correlated cell types.
 License: GPL-2
 Depends: keras, limma, e1071, SingleCellExperiment
-Suggests: BiocStyle, knitr, rmarkdown
+Suggests: BiocStyle, knitr, rmarkdown, networkD3
 Collate: functions_NN.R functions_mhNN.R utils.R
 biocViews: SingleCell, Software, Classification, NeuralNetwork, RNASeq, Transcriptomics, DataRepresentation, Transcription, Sequencing, Preprocessing, GeneExpression, DataImport
 Encoding: UTF-8
