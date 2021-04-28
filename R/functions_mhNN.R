@@ -82,7 +82,7 @@ assignCT <- function(mycount,
 }
 
 GetFeature <- function(LeftRef, RightRef, nMark) {
-  require(limma)
+#  require(limma)
 
   numlab <- c(rep(1, ncol(LeftRef)), rep(0, ncol(RightRef)))
   allRef <- cbind(LeftRef, RightRef)
@@ -125,7 +125,7 @@ GetTree <- function(uniqlab, treestr) {
 trainOneNN <- function(LeftRef, RightRef,
                        modeltype = "medium",
                        verbose = FALSE) {
-  require(e1071)
+#  require(e1071)
   numlab <- c(rep(1, ncol(LeftRef)), rep(0, ncol(RightRef)))
   inputcount <- as.matrix(t(cbind(LeftRef, RightRef)))
 

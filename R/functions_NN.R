@@ -39,7 +39,7 @@ BigNN <- function(train_count, train_label,
                   last_act = "softmax",
                   nClass = 8,
                   verbose = TRUE) {
-  require(keras)
+#  require(keras)
 
   ### Build a big neural network:
   model_big <- keras_model_sequential() %>%
@@ -76,7 +76,7 @@ MediumNN <- function(train_count, train_label,
                      last_act = "softmax",
                      nClass = 8,
                      verbose = TRUE) {
-  require(keras)
+#  require(keras)
 
   ### Build a big neural network:
   model_medium <- keras_model_sequential() %>%
@@ -112,7 +112,7 @@ SmallNN <- function(train_count, train_label,
                     last_act = "softmax",
                     nClass = 8,
                     verbose = TRUE) {
-  require(keras)
+#  require(keras)
 
   ### Build a big neural network:
   model_small <- keras_model_sequential() %>%
