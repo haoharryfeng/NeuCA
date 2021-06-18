@@ -34,10 +34,10 @@ The scRNA-seq data input for `NeuCA` must be objects of the _Bioconductor_ `r Bi
 
 
 **Step 1**: Load in example scRNA-seq data.
+
+We are using two example datasets here: `Baron_scRNA` and `Seg_scRNA`. `Baron_scRNA` is a droplet(inDrop)-based, single-cell RNA-seq data generated from pancrease ([Baron et al.](https://doi.org/10.1016/j.cels.2016.08.011)). Around 10,000 human and 2,000 mouse pancreatic cells from four cadaveric donors and two strains of mice were sequenced. `Seg_scRNA` is a Smart-Seq2 based, single-cell RNA-seq dataset ([Segerstolpe et al.](https://doi.org/10.1016/j.cmet.2016.08.020)). It has thousands of human islet cells from healthy and type-2 diabetic donors. A total of 3,386 cells were collected, with around 350 cells from each donor. Here, subsets of these two datasets (with cell type labels for each cell) were included as examples.
 ```{r, eval = TRUE, message = FALSE}
 library(NeuCA)
-#Baron_scRNA is the training scRNA-seq dataset
-#Seg_scRNA is the testing scRNA-seq dataset
 data("Baron_scRNA")
 data("Seg_scRNA")
 ```
@@ -75,11 +75,26 @@ Seg_sce <- Seg_sce[!duplicated(rownames(Seg_sce)), ]
 ```{r, eval = TRUE, message = FALSE}
 predicted.label = NeuCA(train = Baron_sce, test = Seg_sce, 
                         model.size = "big", verbose = FALSE)
+#Baron_scRNA is used as the training scRNA-seq dataset
+#Seg_scRNA is used as the testing scRNA-seq dataset
 ```
 
 `NeuCA` can detect whether highly-correlated cell types exist in the training dataset, and automatically determine if a general neural-network model will be adopted or a marker-guided hierarchical neural-network will be adopted for classification. 
 
-Users have the option to determine the complexity of the neural-network used in `NeuCA` by specifying the desired `model.size` argument. Here, "big", "medium" and "small" are 3 potential choices, reflecting large, medium and small number of nodes and layers in neural-network, respectively. 
+[**Tuning parameter**] In neural-network, the numbers of layers and nodes are tunable parameters. Users have the option to determine the complexity of the neural-network used in `NeuCA` by specifying the desired `model.size` argument. Here, "big", "medium" and "small" are 3 possible choices, reflecting large, medium and small number of nodes and layers in neural-network, respectively. The model size details are shown in the following Table 1. From our experience, "big" or "medium" can often produce 
+high accuracy predictions.
+
+```{r, eval = TRUE, message = FALSE, echo=FALSE}
+library(knitr)
+library(kableExtra)
+df <- data.frame(Cat = c("Small", "Medium", "Big"), 
+                 Layers = c("3", "4", "5"), 
+                 Nodes = c("64", "64,128", "64,128,256"))
+kable(df, col.names = c("", "Number of layers", "Number of nodes in hidden layers"), escape = F, caption = "Tuning model sizes in the neural-network classifier training.") %>%
+  kable_styling(latex_options = "striped")
+```
+
+
 
 # Predicted cell types
 `predicted.label` is a vector of the same length with the number of cells in the testing dataset, containing all cell's predicted cell type. It can be viewed directly: 
