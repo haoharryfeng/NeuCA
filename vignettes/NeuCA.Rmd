@@ -90,7 +90,8 @@ library(kableExtra)
 df <- data.frame(Cat = c("Small", "Medium", "Big"), 
                  Layers = c("3", "4", "5"), 
                  Nodes = c("64", "64,128", "64,128,256"))
-kable(df, col.names = c("", "Number of layers", "Number of nodes in hidden layers"), escape = F, caption = "Tuning model sizes in the neural-network classifier training.") %>%
+kable(df, col.names = c("", "Number of layers", "Number of nodes in hidden layers"), 
+      escape = FALSE, caption = "Tuning model sizes in the neural-network classifier training.") %>%
   kable_styling(latex_options = "striped")
 ```
 
