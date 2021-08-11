@@ -1,7 +1,7 @@
 # NeuCA: Neural-network based Cell Annotation tool
 
 -------------------
-<img align="left" src="vignettes/NeuCA_hex.png" width="200" height="200"> We developed NEUral-network based Cell Annotation, `NeuCA`, a R/Bioconductor tool for cell type annotation using single-cell RNA-seq data. It is a supervised cell label assignment method that uses existing scRNA-seq data with known labels to train a neural network-based classifier, and then predict cell labels in single-cell RNA-seq data of interest.
+<img align="left" src="vignettes/NeuCA_hex.png" width="156" height="180"> We developed NEUral-network based Cell Annotation, `NeuCA`, a R/Bioconductor tool for cell type annotation using single-cell RNA-seq data. It is a supervised cell label assignment method that uses existing scRNA-seq data with known labels to train a neural network-based classifier, and then predict cell labels in single-cell RNA-seq data of interest.
 
 #### `NeuCA` is currently available on Bioconductor: <https://bioconductor.org/packages/NeuCA/>
 
