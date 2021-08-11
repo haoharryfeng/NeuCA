@@ -6,6 +6,8 @@
 #### `NeuCA` is currently available on Bioconductor: <https://bioconductor.org/packages/NeuCA/>
 
 
+
+
 # 1. Introduction
 The fast advancing single cell RNA sequencing (scRNA-seq) technology enables transcriptome study in heterogeneous tissues at a single cell level. The initial important step of analyzing scRNA-seq data is to accurately annotate cell labels. We present a neural-network based cell annotation method NeuCA. When closely correlated cell types exist, NeuCA uses the cell type tree information through a hierarchical structure of neural networks to improve annotation accuracy. Feature selection is performed in hierarchical structure to further improve classification accuracy. When cell type correlations are not high, a feed-forward neural network is adopted.
 ![workflow](vignettes/workflow.png)
